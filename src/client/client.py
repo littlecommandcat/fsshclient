@@ -140,7 +140,7 @@ class AsyncClient:
             "tf": "1",
             "auth_type": "user",
         }
-        print(uid.value)
+        # print(uid.value)
         async with self.session.post(API_URL, data=data) as resp:
             # text = await resp.text()
             # print(text)
