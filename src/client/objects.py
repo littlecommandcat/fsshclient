@@ -4,9 +4,15 @@ from dataclasses import dataclass, asdict
 class News:
     title: str
     unitname: str
+    unit: int
     clicks: int
+    name: str
+    # issuer: int | str
+    issuer: int
     time: str
     id: int
+    image_url: str | None=None
+    is_sync: bool = False
 
     def to_dict(self):
         return asdict(self)

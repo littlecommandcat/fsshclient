@@ -71,9 +71,14 @@ class Client:
                 News(
                     title=news["title"],
                     unitname=news["unit_name"],
+                    unit=news["unit"],
                     clicks=news["clicks"],
+                    name=news["name"],
+                    issuer=int(news["issuer"]),
                     time=news["time"],
-                    id=news["newsId"]
+                    id=news["newsId"],
+                    image_url=news["news_image"],
+                    is_sync=bool(news["is_sync"])
                 )
             )
 
@@ -160,9 +165,14 @@ class AsyncClient:
                 News(
                     title=news["title"],
                     unitname=news["unit_name"],
+                    unit=news["unit"],
                     clicks=news["clicks"],
+                    name=news["name"],
+                    issuer=int(news["issuer"]), 
                     time=news["time"],
-                    id=news["newsId"]
+                    id=news["newsId"],
+                    image_url=news["news_image"],
+                    is_sync=bool(news["is_sync"])
                 )
             )
         if pageinfo:
